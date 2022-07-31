@@ -21,7 +21,16 @@ keyInObjectArray(objArray, 'animal'); // => false
 
 function keyInObjectArray(objArray, keyString) {
   // Your code here
-}
+  for (let i = 0; i < objArray.length; i++) {
+      let obj = objArray[i];
+      for (let key in obj) {
+          if (key === keyString) {
+              return true;
+          }
+      } 
+  }
+  return false;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyInObjectArray;

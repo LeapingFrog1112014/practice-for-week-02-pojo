@@ -15,6 +15,15 @@ breakDownObj(object2); // => [ 'location', 'borough', 'NY', 'Brooklyn' ]
 ***********************************************************************/
 
 function breakDownObj(obj) {
+  let temp = [];
+  for (key in obj) {
+    temp.push(key);
+  }
+  for (key in obj) {
+    let value = obj[key];
+    temp.push(value);
+  }
+  return temp;
   // Your code here
 }
 
